@@ -1,3 +1,4 @@
-table{
- text-aligen: center;
+caption{
+ caption-side: center
+ font-weight: bold
 }
