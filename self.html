@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8">
+        <title>せいちゃんの勉強用html</title>
+        <link rel="stylesheet" href="せいちゃんの勉強用.css">
+        <link href="https://fonts.googleapis.com/earlyaccess/kokoro.css" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/earlyaccess/hannari.css" rel="stylesheet">
+    </head>
+
+    <body>
+       <header>
+
+        <font color="aliceblue">
+        <h3 class="title">
+            seichan  web   
+        </h3>
+        </font>
+       
+        <nav class="nav">
+            <ul class="menu-group">
+                <li class="menu-item"><a href="#せいちゃん">せいちゃん</a></li>
+                <li class="menu-item"><a href="https://cit.manaba.jp/ct/home">cit manaba</a></li>
+                <li class="menu-item"><a href="#自己紹介">自己紹介</a></li>
+                <li class="menu-item"><a href="#スケジュール">スケジュール</a></li>
+                <li class="menu-item"><a href="#SNS">Instagram</a></li>
+            </ul>
+        </nav>   
+        </header>
+
+        <script>
+            //今日の日付データを変数に格納
+            //変数は"today"とする
+            var today=new Date(); 
+    
+            //年・月・日・曜日を取得
+            var year = today.getFullYear();
+            var month = today.getMonth()+1;
+            var week = today.getDay();
+            var day = today.getDate();
+            var week_ja= new Array("日","月","火","水","木","金","土");
+
+            //年・月・日・曜日を書き出す
+            document.write(year+"年"+month+"月"+day+"日 "+week_ja[week]+"曜日");
+
+            //時刻データを取得して変数に格納する
+            //変数は"time"とする
+            var time= new Date();
+            
+            //時・分・秒を取得
+            var hour = time.getHours();
+            var minute = time.getMinutes();
+            var second = time.getSeconds();
+            document.write(hour+"時",+minute+"分"+second+"秒");
+        </script>
+
+
+        <div align="middle">
+            <h1>
+                <span>そうだ、小豆島にいこう。</span></h1>
+        </div>
+
+
+        <h2>1.リンクづけ</h2>
+        <p>リンクづけは「a href="https〜"」の形にしてaタグ（アンカータグ）を使用する。
+            <br>点はulのliで、番号はolのliを使う。
+        </p>
+
+        <br>
+        <a href="https://ja.wikipedia.org">wikipedia</a>→何もなし
+        <br>
+
+        <ul>
+            <li>
+                <a href="https://ja.wikipedia.org">wikipedia</a>→点のみ
+            </li>
+        </ul>
+
+        <ol>
+            <li>
+                <a href="https://ja.wikipedia.org">wikipedia</a>→番号あり
+            </li>
+        </ol>
+
+        <br>
+        
+
+        <h2>2.見出しタグ</h2>
+        <h3>見出し</h3>
+        <h4>見出し</h4>
+        <h5>見出し</h5>
+        <h6>見出し</h6>
+        のようにh1~6までの異なる大きさの見出しタグが存在する。
+
+
+        <h2>3.pタグ</h2>
+        pタグで囲ったテキストの前後に1行の改行が生まれるが、改行の目的で使用することはない。
+        <br>文章中に改行する場合はbrタグを使用する。
+
+
+        <h2>4.imgタグ</h2>
+        <div class="class1">
+            <img src="https://sp-akiba-souken.k-img.com/assets/images/vote/000/083/83210.jpg"
+            alt="おまえがなんばーわんだ" width="320" height="240" text
+            >
+        </div>
+        divタグでclassを指定することによって、配置を決める。
+        <br>
+        cssの例
+        <br>
+        .class1 {
+            text-align: center;
+          }/*写真*/
+        <br>
+        ＜img src="" alt=""＞のalt属性でwidth（幅）height（高さ）などを決めている。
+
+        <h2>5.tableタグ</h2>
+
+        <table border="1">
+            <tr>
+              <th>氏名</th>
+              <td>齋藤　聖也</td>
+            </tr>
+            <tr>
+              <th>年齢</th>
+              <td>19歳</td>
+            </tr>
+          </table>
+          tableタグにborderを使うことで表にラインを引くことができる。
+          <br>
+          thタグを連続で書いて、横にするか、trで分けて縦に並べることもできる
+
+
+        <h2>6.sectionタグ</h2>
+        「section」には「節」や「章」という意味があり、見出しを伴う文書の章や節目、区間であることを表現する際に使用する。
+        <br>
+        sectionタグ内には、下記のように見出し要素（h1〜h6）を含む必要がある。
+        <section>
+            <h2>例：sectionタグ</h2>
+        </section>
+
+
+        <h2>7.articleタグ</h2>
+        「article」には「記事」や「論説」という意味があり、サイト内で独立したコンテンツをラップする際に使用する。
+        <br>articleタグ内に、見出し要素（h1〜h6）を含む必要がある。
+
+
+        <h2>8.divタグ</h2>
+        「div」とは、「division（ディビジョン）」の略で、特別な意味はなく、要素をグループ化する際に使用する。
+        <br>divタグはブロック要素としてグループ化を行うため、下に積まれていく。
+
+        <div>
+            <p>あいうえお</p>
+            <p>かきくけこ</p>
+        </div>
+
+        <h2>9.spanタグ</h2>
+        spanタグは、divタグと同様に特別な意味はなく、要素をグループ化する際に使用する。
+        <br>ただしspanタグはインライン要素としてのグループ化を行うため、下に積まれずに横に並ぶ。
+        <br>
+
+        <span>あいうえお</span>
+        <span>かきくけこ</span>
+
+        <h2>10.headerタグ</h2>
+        headerタグは、サイトのヘッダー部分を構造化する際に使用する。
+        <br>具体的には、サイトのタイトルやナビゲーションなどを囲う。
+        <br>詳しくは裏側をご覧ください。
+
+        <header>
+            <!-- サイトのタイトルやナビゲーションが入ります -->
+        </header>
+
+        <h2>11.navタグ</h2>
+        「nav」とは「navigation（ナビゲーション）」の略で、サイトのメニュー部分を示す際に使用する。
+        <br>navタグの中には、ul、liタグなどを用いてメニューを作る。
+        <br>""部分はなんでもいい、その後ろが表示される。
+        <br>詳しくは裏側を見ればわかります。
+
+        <nav>
+            <ul>
+              <li><a href="#せいちゃん">せいちゃん</a></li>
+              <li><a href="#せいやしか勝たん！">せいちゃんしか勝たん！！！</a></li>
+              <li><a href="https://cit.manaba.jp/ct/home">manaba cit</a></li>
+            </ul>
+        </nav>
+
+        <h2>12.footerタグ</h2>
+        footerタグは、webサイトの末尾・最後の部分を示す際に使用する。
+        <br>サイトに関する情報や、著作権に関する表記、連絡先などを構造化する。
+        <br>詳しくは裏側をご覧ください。
+        <footer>
+            <!-- 著者の情報やコピーライトが入ります -->
+        </footer>
+
+        <div class="matrix anim">
+            <span class="bg-wrap"><span class="inn large">文字がぬるりと現れる</span></span>
+            <span class="bg-wrap"><span class="inn small">サンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキスト<br>サンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキスト<br>サンプルテキストサンプルテキストサンプルテキスト</span></span>
+        </div>
+
+        <hr>
+
+        <div class="class2">
+            <font color="red">終わり(^_^)</font>
+        </div>
+
+        <div class="start">
+            <p><img src="おにぎり.jpg" alt="おにぎり"></p>
+        </div>
+
+        
+    </body>
+
+
+</html>
